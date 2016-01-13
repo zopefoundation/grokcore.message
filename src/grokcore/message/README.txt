@@ -74,7 +74,7 @@ or, of course, by registering a RAMMessageSource manually:
   >>> from z3c.flashmessage.sources import RAMMessageSource
   >>> ram_source = RAMMessageSource()
   >>> provideUtility(ram_source, name=u'ram')
- 
+
 Now we can get the RAM source:
 
   >>> getUtility(IMessageSource, name=u'ram')
@@ -97,14 +97,6 @@ your Zope instance.
 It is a baseclass, which means that you have to derive from it to
 register an instance as global utility upon your software being
 grokked (see examples below).
-
-It provides the methods required by the IMessageSource interface:
-
-  >>> from z3c.flashmessage.interfaces import IMessageSource
-  >>> from zope.interface import verify
-  >>> from grokcore.message import UniqueMessageSource
-  >>> verify.verifyClass(IMessageSource, UniqueMessageSource)
-  True
 
 Methods:
 
@@ -188,16 +180,25 @@ Creating a ``UniqueMessageSource``:
   >>> from grokcore.message import UniqueMessageSource
   >>> class MyUniqueMessageSource(UniqueMessageSource):
   ...   grok.name('uniq_source')
-  
+
 After being grokked, the source is automatically registered:
 
   >>> grok.testing.grok_component('MyUniqueMessageSource',
-  ...                             MyUniqueMessageSource) 
+  ...                             MyUniqueMessageSource)
   True
 
   >>> source = getUtility(IMessageSource, name='uniq_source')
   >>> source
   <MyUniqueMessageSource object at 0x...>
+
+
+It provides the methods required by the IMessageSource interface:
+
+  >>> from z3c.flashmessage.interfaces import IMessageSource
+  >>> from zope.interface import verify
+
+  >>> verify.verifyClass(IMessageSource, MyUniqueMessageSource)
+  True
 
 
 We can list the message stored in the source:
