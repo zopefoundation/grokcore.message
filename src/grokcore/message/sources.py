@@ -9,6 +9,7 @@ class UniqueMessageSource(grok.GlobalUtility):
     """
     grok.baseclass()
     grok.implements(IMessageSource)
+    grok.provides(IMessageSource)
 
     message = None
 
