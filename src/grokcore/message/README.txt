@@ -59,7 +59,8 @@ including ``ram.zcml`` and is not registered by default:
   >>> getUtility(IMessageSource, name=u'ram')
   Traceback (most recent call last):
   ...
-  ComponentLookupError: (<InterfaceClass ...IMessageSource>, u'ram')
+  zope.interface.interfaces.ComponentLookupError: (<InterfaceClass z3c.flashmessage.interfaces.IMessageSource>, 'ram')
+
 
 You can enable this source by including ``ram.zcml`` from
 ``grokcore.message`` in your ZCML setup like this::
@@ -183,8 +184,9 @@ Creating a ``UniqueMessageSource``:
 
 After being grokked, the source is automatically registered:
 
-  >>> grok.testing.grok_component('MyUniqueMessageSource',
-  ...                             MyUniqueMessageSource)
+  >>> grok.testing.grok_component(
+  ...     'MyUniqueMessageSource', MyUniqueMessageSource,
+  ...     dotted_name='grokcore.message.tests')
   True
 
   >>> source = getUtility(IMessageSource, name='uniq_source')
@@ -213,7 +215,7 @@ We can list the message stored in the source:
   >>> list(source.list())
   [<z3c.flashmessage.message.PersistentMessage object at 0x...>]
 
-  >>> print list(source.list())[0].message
+  >>> print(list(source.list())[0].message)
   Hello!
 
 When we send another message, the old one will be silenty discarded:
@@ -222,7 +224,7 @@ When we send another message, the old one will be silenty discarded:
   >>> len(list(source.list()))
   1
 
-  >>> print list(source.list())[0].message
+  >>> print(list(source.list())[0].message)
   Hello again!
 
 We can delete the message:
