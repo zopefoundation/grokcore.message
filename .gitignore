@@ -3,6 +3,9 @@ __pycache__
 src/*.egg-info
 
 .installed.cfg
-bin
+include/
+lib/
+bin/
 develop-eggs
 parts
+share/
