@@ -191,7 +191,7 @@ After being grokked, the source is automatically registered:
 
   >>> source = getUtility(IMessageSource, name='uniq_source')
   >>> source
-  <MyUniqueMessageSource object at 0x...>
+  <...MyUniqueMessageSource object at 0x...>
 
 
 It provides the methods required by the IMessageSource interface:
