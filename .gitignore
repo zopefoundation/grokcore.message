@@ -1,5 +1,5 @@
 *.pyc
-.coverage
+.coverage*
 .installed.cfg
 .tox/
 __pycache__
@@ -8,5 +8,7 @@ develop-eggs
 include/
 lib/
 parts
+pip-selfcheck.json
+pyvenv.cfg
 share/
 src/*.egg-info
