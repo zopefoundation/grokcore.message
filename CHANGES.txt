@@ -4,14 +4,12 @@ CHANGES
 0.4.4 (unreleased)
 ==================
 
-- Nothing changed yet.
-
+- Python 3 compatibility.
 
 0.4.3 (2016-02-15)
 ==================
 
 - Update tests.
-
 
 0.4.2 (2010-10-25)
 ==================
