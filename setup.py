@@ -1,7 +1,7 @@
 import os
 from setuptools import setup, find_packages
 
-version = '3.0.1'
+version = '3.0.2.dev0'
 
 readme = open(os.path.join('src', 'grokcore', 'message', 'README.txt')).read()
 changes = open("CHANGES.txt").read()
