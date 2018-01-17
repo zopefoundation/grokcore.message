@@ -4,11 +4,11 @@ import grokcore.component as grok
 from grokcore.message import IMessageSource, PersistentMessage
 
 
+@grok.implementer(IMessageSource)
 class UniqueMessageSource(grok.GlobalUtility):
     """A source that handles a unique message.
     """
     grok.baseclass()
-    grok.implements(IMessageSource)
     grok.provides(IMessageSource)
 
     message = None
