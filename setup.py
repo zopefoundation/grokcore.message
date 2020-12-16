@@ -1,7 +1,7 @@
 import os
 from setuptools import setup, find_packages
 
-version = '3.0.2.dev0'
+version = '3.1.0.dev0'
 
 readme = open(os.path.join('src', 'grokcore', 'message', 'README.txt')).read()
 changes = open("CHANGES.txt").read()
@@ -13,14 +13,14 @@ install_requires = [
     'grokcore.component >= 2.5dev',
     'z3c.flashmessage',
     'zope.component',
-    'zope.traversing', # zope.session seems not to declare this dep.?
-    ]
+    'zope.traversing',  # zope.session seems not to declare this dep.?
+]
 
 tests_require = [
     'zope.publisher',
     'zope.security',
     'zope.session',
-    ]
+]
 
 setup(name='grokcore.message',
       version=version,
@@ -42,20 +42,24 @@ setup(name='grokcore.message',
       classifiers=[
           'Development Status :: 5 - Production/Stable',
           'Environment :: Web Environment',
+          'Framework :: Zope :: 3',
           'Intended Audience :: Developers',
           'License :: OSI Approved :: Zope Public License',
-          'Programming Language :: Python',
           'Natural Language :: English',
           'Operating System :: OS Independent',
-          'Topic :: Internet :: WWW/HTTP',
-          'Framework :: Zope :: 3',
+          'Programming Language :: Python',
           'Programming Language :: Python :: 2',
           'Programming Language :: Python :: 2.7',
           'Programming Language :: Python :: 3',
-          'Programming Language :: Python :: 3.4',
           'Programming Language :: Python :: 3.5',
           'Programming Language :: Python :: 3.6',
+          'Programming Language :: Python :: 3.7',
+          'Programming Language :: Python :: 3.8',
+          'Programming Language :: Python :: 3.9',
+          'Programming Language :: Python :: Implementation',
+          'Programming Language :: Python :: Implementation :: CPython',
           'Programming Language :: Python :: Implementation :: PyPy',
+          'Topic :: Internet :: WWW/HTTP',
       ],
       entry_points="""
       # -*- Entry points: -*-
