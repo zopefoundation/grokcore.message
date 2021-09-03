@@ -20,6 +20,7 @@ tests_require = [
     'zope.publisher',
     'zope.security',
     'zope.session',
+    'zope.testrunner',
 ]
 
 setup(name='grokcore.message',
