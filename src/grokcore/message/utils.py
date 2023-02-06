@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
 
 from zope.component import queryUtility
-from grokcore.message import IMessageSource, IMessageReceiver
+
+from grokcore.message import IMessageReceiver
+from grokcore.message import IMessageSource
 
 
 def send(message, type='message', name='session'):

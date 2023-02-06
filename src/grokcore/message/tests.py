@@ -3,11 +3,13 @@
 
 import doctest
 import unittest
-import grokcore.message
 
 from zope.component.testlayer import ZCMLFileLayer
 from zope.publisher.browser import TestRequest
-from zope.security.management import newInteraction, endInteraction
+from zope.security.management import endInteraction
+from zope.security.management import newInteraction
+
+import grokcore.message
 
 
 class GrokcoreMessageLayer(ZCMLFileLayer):
