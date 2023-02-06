@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Register a global message receiver and a global session based
 message source.
 """

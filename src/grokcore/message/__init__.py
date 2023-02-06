@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 from z3c.flashmessage.interfaces import IMessage
 from z3c.flashmessage.interfaces import IMessageReceiver
 from z3c.flashmessage.interfaces import IMessageSource

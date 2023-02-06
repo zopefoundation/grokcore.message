@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 from zope.component import queryUtility
 
 from grokcore.message import IMessageReceiver
