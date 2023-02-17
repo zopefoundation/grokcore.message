@@ -1,12 +1,15 @@
 import os
-from setuptools import setup, find_packages
 
-version = '3.1.0.dev0'
+from setuptools import find_packages
+from setuptools import setup
+
+
+version = '4.0.dev0'
 
 readme = open(os.path.join('src', 'grokcore', 'message', 'README.txt')).read()
 changes = open("CHANGES.txt").read()
 
-long_description = "%s\n\n%s\n" % (readme, changes)
+long_description = "{}\n\n{}\n".format(readme, changes)
 
 install_requires = [
     'setuptools',
@@ -29,14 +32,15 @@ setup(name='grokcore.message',
       long_description=long_description,
       keywords='Grok Messages',
       author='Grok Team',
-      author_email='grok-dev@zope.org',
-      url='http://pypi.python.org/pypi/grokcore.message',
+      author_email='grok-dev@zope.dev',
+      url='https://github.com/zopefoundation/grokcore.message',
       license='ZPL 2.1',
       namespace_packages=['grokcore'],
       packages=find_packages('src'),
       package_dir={'': 'src'},
       include_package_data=True,
       zip_safe=False,
+      python_requires='>=3.7',
       install_requires=install_requires,
       tests_require=tests_require,
       extras_require=dict(test=tests_require),
@@ -49,14 +53,12 @@ setup(name='grokcore.message',
           'Natural Language :: English',
           'Operating System :: OS Independent',
           'Programming Language :: Python',
-          'Programming Language :: Python :: 2',
-          'Programming Language :: Python :: 2.7',
           'Programming Language :: Python :: 3',
-          'Programming Language :: Python :: 3.5',
-          'Programming Language :: Python :: 3.6',
           'Programming Language :: Python :: 3.7',
           'Programming Language :: Python :: 3.8',
           'Programming Language :: Python :: 3.9',
+          'Programming Language :: Python :: 3.10',
+          'Programming Language :: Python :: 3.11',
           'Programming Language :: Python :: Implementation',
           'Programming Language :: Python :: Implementation :: CPython',
           'Programming Language :: Python :: Implementation :: PyPy',

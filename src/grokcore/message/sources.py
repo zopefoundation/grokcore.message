@@ -1,7 +1,7 @@
-# -*- coding: utf-8 -*-
-
 import grokcore.component as grok
-from grokcore.message import IMessageSource, PersistentMessage
+
+from grokcore.message import IMessageSource
+from grokcore.message import PersistentMessage
 
 
 @grok.implementer(IMessageSource)
@@ -13,7 +13,7 @@ class UniqueMessageSource(grok.GlobalUtility):
 
     message = None
 
-    def send(self, message, type=u'message'):
+    def send(self, message, type='message'):
         self.message = PersistentMessage(message, type)
 
     def list(self, type=None):
