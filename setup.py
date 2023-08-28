@@ -4,7 +4,7 @@ from setuptools import find_packages
 from setuptools import setup
 
 
-version = '4.0.dev0'
+version = '4.0'
 
 with open(os.path.join('src', 'grokcore', 'message', 'README.rst')) as f:
     readme = f.read()
