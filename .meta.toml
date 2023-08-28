@@ -2,7 +2,7 @@
 # https://github.com/zopefoundation/meta/tree/master/config/pure-python
 [meta]
 template = "pure-python"
-commit-id = "552fe384"
+commit-id = "6e1fe296"
 
 [python]
 with-pypy = true
@@ -26,6 +26,6 @@ use-flake8 = true
 
 [manifest]
 additional-rules = [
-    "recursive-include src *.txt",
+    "recursive-include src *.rst",
     "recursive-include src *.zcml",
     ]

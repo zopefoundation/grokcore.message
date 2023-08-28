@@ -6,23 +6,24 @@ from setuptools import setup
 
 version = '4.0.dev0'
 
-readme = open(os.path.join('src', 'grokcore', 'message', 'README.txt')).read()
-changes = open("CHANGES.txt").read()
+with open(os.path.join('src', 'grokcore', 'message', 'README.rst')) as f:
+    readme = f.read()
+with open("CHANGES.rst") as f:
+    changes = f.read()
 
 long_description = "{}\n\n{}\n".format(readme, changes)
 
 install_requires = [
     'setuptools',
-    'grokcore.component >= 2.5dev',
+    'grokcore.component >= 2.5',
     'z3c.flashmessage',
     'zope.component',
-    'zope.traversing',  # zope.session seems not to declare this dep.?
 ]
 
 tests_require = [
     'zope.publisher',
     'zope.security',
-    'zope.session',
+    'zope.session >= 5.1',
     'zope.testrunner',
 ]
 
@@ -42,7 +43,6 @@ setup(name='grokcore.message',
       zip_safe=False,
       python_requires='>=3.7',
       install_requires=install_requires,
-      tests_require=tests_require,
       extras_require=dict(test=tests_require),
       classifiers=[
           'Development Status :: 5 - Production/Stable',
@@ -64,7 +64,4 @@ setup(name='grokcore.message',
           'Programming Language :: Python :: Implementation :: PyPy',
           'Topic :: Internet :: WWW/HTTP',
       ],
-      entry_points="""
-      # -*- Entry points: -*-
-      """,
       )

@@ -25,7 +25,7 @@ class GrokcoreMessageLayer(ZCMLFileLayer):
 def test_suite():
     suite = unittest.TestSuite()
     test = doctest.DocFileSuite(
-        'README.txt', optionflags=(doctest.ELLIPSIS |
+        'README.rst', optionflags=(doctest.ELLIPSIS |
                                    doctest.IGNORE_EXCEPTION_DETAIL))
     test.layer = GrokcoreMessageLayer(grokcore.message)
     suite.addTest(test)
