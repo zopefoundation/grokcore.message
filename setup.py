@@ -11,7 +11,7 @@ with open(os.path.join('src', 'grokcore', 'message', 'README.rst')) as f:
 with open("CHANGES.rst") as f:
     changes = f.read()
 
-long_description = "{}\n\n{}\n".format(readme, changes)
+long_description = f"{readme}\n\n{changes}\n"
 
 install_requires = [
     'setuptools',
@@ -35,13 +35,13 @@ setup(name='grokcore.message',
       author='Grok Team',
       author_email='grok-dev@zope.dev',
       url='https://github.com/zopefoundation/grokcore.message',
-      license='ZPL 2.1',
+      license='ZPL-2.1',
       namespace_packages=['grokcore'],
       packages=find_packages('src'),
       package_dir={'': 'src'},
       include_package_data=True,
       zip_safe=False,
-      python_requires='>=3.7',
+      python_requires='>=3.9',
       install_requires=install_requires,
       extras_require=dict(test=tests_require),
       classifiers=[
@@ -54,11 +54,11 @@ setup(name='grokcore.message',
           'Operating System :: OS Independent',
           'Programming Language :: Python',
           'Programming Language :: Python :: 3',
-          'Programming Language :: Python :: 3.7',
-          'Programming Language :: Python :: 3.8',
           'Programming Language :: Python :: 3.9',
           'Programming Language :: Python :: 3.10',
           'Programming Language :: Python :: 3.11',
+          'Programming Language :: Python :: 3.12',
+          'Programming Language :: Python :: 3.13',
           'Programming Language :: Python :: Implementation',
           'Programming Language :: Python :: Implementation :: CPython',
           'Programming Language :: Python :: Implementation :: PyPy',
