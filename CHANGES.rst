@@ -1,7 +1,7 @@
 CHANGES
 *******
 
-4.1 (unreleased)
+4.1 (2025-06-04)
 ================
 
 - Add support for Python 3.12, 3.13.
