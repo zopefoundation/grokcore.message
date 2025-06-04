@@ -1,6 +1,5 @@
 import os
 
-from setuptools import find_packages
 from setuptools import setup
 
 
@@ -24,7 +23,7 @@ tests_require = [
     'zope.publisher',
     'zope.security',
     'zope.session >= 5.1',
-    'zope.testrunner',
+    'zope.testrunner >= 6.4',
 ]
 
 setup(name='grokcore.message',
@@ -36,9 +35,6 @@ setup(name='grokcore.message',
       author_email='grok-dev@zope.dev',
       url='https://github.com/zopefoundation/grokcore.message',
       license='ZPL-2.1',
-      namespace_packages=['grokcore'],
-      packages=find_packages('src'),
-      package_dir={'': 'src'},
       include_package_data=True,
       zip_safe=False,
       python_requires='>=3.9',
