@@ -3,7 +3,7 @@ import os
 from setuptools import setup
 
 
-version = '5.0'
+version = '5.1.dev0'
 
 with open(os.path.join('src', 'grokcore', 'message', 'README.rst')) as f:
     readme = f.read()
